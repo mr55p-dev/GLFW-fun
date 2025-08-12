@@ -20,10 +20,10 @@ int main() {
 	glfwSetErrorCallback(error_callback);
 	DBG("Initialised glwf");
 
-	GLFWwindow *window = glfwCreateWindow(200, 200, "My window", NULL, NULL);
+	GLFWwindow *window = glfwCreateWindow(400, 400, "My window", NULL, NULL);
 	if (!window)
 	{
-		std::cerr << "Window didnt open :(" << std::endl;
+		DBG("Window failed to open");
 	}
 
 	std::this_thread::sleep_for(std::chrono::seconds(10));
